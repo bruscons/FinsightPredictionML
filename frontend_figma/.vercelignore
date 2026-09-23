@@ -1,0 +1,18 @@
+# Arquivos desnecessários para o deploy
+*.bat
+*.md
+README*
+art_matematica/
+assets/
+code/
+dados/
+documents/
+notebook/
+frontend/
+iniciar_app.ps1
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
