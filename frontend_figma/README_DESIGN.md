@@ -1,61 +1,61 @@
-# FINNET | BILL HUNTERS - Interface 
+# FINNET | BILL HUNTERS - Interface
 
-### ✨ Destaques Visuais:
+### ✨ Visual Highlights:
 
-1. **Tema Escuro Profissional**
-   - Fundo escuro (#0a0a0a) 
-   - Cards com bordas sutis (#1a1a1a)
-   - Texto branco/cinza para melhor contraste
+1. **Professional Dark Theme**
+   - Dark background (#0a0a0a)
+   - Cards with subtle borders (#1a1a1a)
+   - White/gray text for better contrast
 
-2. **Header Estilizado**
-   - Título "FINNET | BILL HUNTERS" em destaque
-   - Botões de ação (Adicionar Pagador/Boleto) no canto superior direito
-   - Subtítulo explicativo da plataforma
+2. **Styled Header**
+   - Highlighted "FINNET | BILL HUNTERS" title
+   - Action buttons (Add Payer/Slip) in the top-right corner
+   - Explanatory platform subtitle
 
-3. **Métricas Destacadas**
-   - Cards de métricas com valores grandes e coloridos
-   - Seletor de período (3, 6, 12 meses)
-   - Cores específicas: Verde para inadimplência, branco para valores
+3. **Highlighted Metrics**
+   - Metric cards with large, colored values
+   - Period selector (3, 6, 12 months)
+   - Specific colors: green for default rate, white for amounts
 
-4. **Tabela de Clientes Moderna**
-   - Fundo escuro com bordas sutis
-   - Badges coloridos para níveis de risco
-   - Campo de busca integrado
-   - Layout responsivo
+4. **Modern Client Table**
+   - Dark background with subtle borders
+   - Colored badges for risk levels
+   - Built-in search field
+   - Responsive layout
 
-5. **Formulário de Predição Aprimorado**
-   - Campos com background dark
-   - Botão verde com destaque
-   - Área de resultado mais visual
+5. **Enhanced Prediction Form**
+   - Fields with dark background
+   - Highlighted green button
+   - More visual result area
 
-### 🚀 Como Usar:
+### 🚀 How to Use:
 
-1. **Iniciar a aplicação:**
+1. **Start the application:**
    ```bash
    python app_super_simples.py
    ```
 
-2. **Acessar:** http://localhost:5000
+2. **Access:** http://localhost:5000
 
-### 🎯 Funcionalidades Implementadas:
+### 🎯 Implemented Features:
 
-✅ **Seletor de Período**: Alterna entre 3, 6 e 12 meses (métricas simuladas)
-✅ **Tabela de Clientes**: Lista todos os pagadores com informações de risco
-✅ **Busca**: Campo para filtrar clientes por nome ou ID
-✅ **Predição Visual**: Resultado com percentual grande e cores distintivas
-✅ **Design Responsivo**: Funciona bem em desktop e mobile
+✅ **Period Selector**: Switches between 3, 6, and 12 months (simulated metrics)
+✅ **Client Table**: Lists all payers with risk information
+✅ **Search**: Field to filter clients by name or ID
+✅ **Visual Prediction**: Result with large percentage and distinct colors
+✅ **Responsive Design**: Works well on desktop and mobile
 
-### 🎨 Cores do Tema:
+### 🎨 Theme Colors:
 
-- **Verde Accent**: #00ff88 (botões, métricas positivas)
-- **Laranja**: #ff6b35 (risco médio)
-- **Vermelho**: #ff4757 (risco alto)
-- **Fundo Escuro**: #0a0a0a
+- **Accent Green**: #00ff88 (buttons, positive metrics)
+- **Orange**: #ff6b35 (medium risk)
+- **Red**: #ff4757 (high risk)
+- **Dark Background**: #0a0a0a
 - **Cards**: #1a1a1a
-- **Bordas**: #333333
+- **Borders**: #333333
 
-### 📱 Layout Responsivo:
+### 📱 Responsive Layout:
 
-- Desktop: Layout em duas colunas para o formulário
-- Mobile: Layout empilhado automaticamente
-- Tabela com scroll horizontal em telas pequenas
+- Desktop: Two-column layout for the form
+- Mobile: Automatically stacked layout
+- Table with horizontal scroll on small screens

@@ -1,50 +1,50 @@
-# 🚀 FINNET BILL HUNTERS - Deploy Vercel
+# 🚀 FINNET BILL HUNTERS - Vercel Deploy
 
-## Estrutura Final para Deploy
+## Final Deploy Structure
 
-Esta é a versão limpa e otimizada para deploy no Vercel com apenas os arquivos essenciais.
+This is the clean, optimized version for deploying to Vercel with only the essential files.
 
-### 📁 Arquivos Principais:
+### 📁 Main Files:
 
-- **`app.py`** - Aplicação Flask principal
-- **`app_super_simples.py`** - Versão local (backup)
-- **`templates/index_simples.html`** - Interface web
-- **`requirements.txt`** - Dependências Python
-- **`vercel.json`** - Configuração do Vercel
-- **`.vercelignore`** - Arquivos ignorados no deploy
+- **`app.py`** - Main Flask application
+- **`app_super_simples.py`** - Local version (backup)
+- **`templates/index_simples.html`** - Web interface
+- **`requirements.txt`** - Python dependencies
+- **`vercel.json`** - Vercel configuration
+- **`.vercelignore`** - Files ignored during deploy
 
-### 📦 Para Deploy no Vercel:
+### 📦 To Deploy on Vercel:
 
-1. **Conectar ao Git**: Faça push para um repositório GitHub
-2. **Importar no Vercel**: Conecte o repositório
-3. **Deploy Automático**: O Vercel detectará o `vercel.json`
+1. **Connect to Git**: Push to a GitHub repository
+2. **Import into Vercel**: Connect the repository
+3. **Automatic Deploy**: Vercel will detect `vercel.json`
 
-### 🎯 Funcionalidades:
+### 🎯 Features:
 
-- ✅ 3 pagadores com perfis de risco diferentes
-- ✅ Predição de inadimplência em tempo real
-- ✅ Interface moderna com tema escuro
-- ✅ Dashboard com métricas
-- ✅ Footer profissional
-- ✅ Design responsivo
+- ✅ 3 payers with different risk profiles
+- ✅ Real-time default prediction
+- ✅ Modern interface with dark theme
+- ✅ Dashboard with metrics
+- ✅ Professional footer
+- ✅ Responsive design
 
-### 🔧 Tecnologias:
+### 🔧 Technologies:
 
 - **Backend**: Flask + Python
 - **Frontend**: HTML5 + Bootstrap + JavaScript
 - **Deploy**: Vercel Serverless
 
-### 📊 Pagadores Disponíveis:
+### 📊 Available Payers:
 
-- **João Silva** (ID: 2793444) - Baixo Risco
-- **Maria Santos** (ID: 4606075) - Médio Risco  
-- **Carlos Oliveira** (ID: 5362811) - Alto Risco
+- **João Silva** (ID: 2793444) - Low Risk
+- **Maria Santos** (ID: 4606075) - Medium Risk
+- **Carlos Oliveira** (ID: 5362811) - High Risk
 
-### 🌐 Endpoints da API:
+### 🌐 API Endpoints:
 
-- `GET /` - Interface principal
-- `GET /api/pagadores` - Lista de pagadores
-- `GET /api/pagador/<id>` - Detalhes do pagador
-- `POST /api/predict` - Predição de inadimplência
+- `GET /` - Main interface
+- `GET /api/pagadores` - List of payers
+- `GET /api/pagador/<id>` - Payer details
+- `POST /api/predict` - Default prediction
 
-Pronto para deploy! 🚀
+Ready to deploy! 🚀

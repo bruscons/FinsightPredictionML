@@ -1,161 +1,161 @@
-# 🏦 Sistema de Predição de Inadimplência - Finnet Corp
+# 🏦 Default Prediction System - Finnet Corp
 
-Uma aplicação web desenvolvida em Streamlit para predição de inadimplência de boletos bancários, utilizando o modelo de Machine Learning treinado no projeto Bill Hunters.
+A Streamlit web application for predicting default on bank payment slips (boletos), using the Machine Learning model trained in the Bill Hunters project.
 
-## 📋 Funcionalidades
+## 📋 Features
 
-- **Análise de Pagadores Existentes**: Visualize o histórico completo de boletos de clientes já cadastrados
-- **Predição para Novos Boletos**: Faça predições de inadimplência para novos boletos
-- **Classificação de Risco**: Sistema automático de classificação (Baixo, Médio, Alto)
-- **Recomendações Inteligentes**: Sugestões de ações baseadas no nível de risco
-- **Interface Intuitiva**: Dashboard interativo e fácil de usar
+- **Existing Payer Analysis**: View the full billing history of already registered clients
+- **Prediction for New Payment Slips**: Run default predictions for new payment slips
+- **Risk Classification**: Automatic classification system (Low, Medium, High)
+- **Smart Recommendations**: Suggested actions based on risk level
+- **Intuitive Interface**: Interactive, easy-to-use dashboard
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### Pré-requisitos
+### Prerequisites
 
-- Python 3.8 ou superior
-- pip (gerenciador de pacotes Python)
+- Python 3.8 or higher
+- pip (Python package manager)
 
-### Instalação
+### Installation
 
-1. Clone o repositório e navegue até o diretório:
+1. Clone the repository and navigate to the directory:
 ```bash
 cd 2025-2A-T18-IN03-G05
 ```
 
-2. Instale as dependências:
+2. Install the dependencies:
 ```bash
 pip install -r requirements_app.txt
 ```
 
-3. Execute a aplicação:
+3. Run the application:
 ```bash
 streamlit run app_predicao_inadimplencia.py
 ```
 
-4. Acesse a aplicação no seu navegador:
+4. Access the application in your browser:
 ```
 http://localhost:8501
 ```
 
-## 📊 Estrutura de Dados
+## 📊 Data Structure
 
-A aplicação utiliza os seguintes dados:
+The application uses the following data:
 
-### Dados de Entrada (Boleto)
-- **Número do Boleto**: Identificador único
-- **Valor Original**: Valor do boleto em R$
-- **Data de Inclusão**: Data de criação do boleto
-- **Data de Vencimento**: Data limite para pagamento
-- **ID do Pagador**: Identificador do cliente
-- **ID do Grupo**: Grupo do beneficiário
-- **ID do Beneficiário**: Identificador do beneficiário
+### Input Data (Payment Slip)
+- **Payment Slip Number**: Unique identifier
+- **Original Amount**: Payment slip amount in R$
+- **Issue Date**: Date the payment slip was created
+- **Due Date**: Payment deadline
+- **Payer ID**: Client identifier
+- **Group ID**: Beneficiary group
+- **Beneficiary ID**: Beneficiary identifier
 
-### Dados Históricos (Automaticamente Calculados)
-- Quantidade de cobranças históricas
-- Valor médio histórico
-- Taxa de inadimplência histórica
-- Taxa de atraso histórica
-- Tempo desde primeira cobrança
-- Desvio padrão dos valores
+### Historical Data (Automatically Calculated)
+- Number of historical charges
+- Historical average amount
+- Historical default rate
+- Historical late-payment rate
+- Time since first charge
+- Standard deviation of amounts
 
-## 🎯 Como Usar
+## 🎯 How to Use
 
-### 1. Análise de Pagador Existente
+### 1. Existing Payer Analysis
 
-1. No menu lateral, selecione "Pagador Existente"
-2. Escolha um pagador da lista dropdown
-3. Visualize o histórico completo de boletos
-4. Analise as métricas resumidas (total de boletos, valor total, taxa de inadimplência)
+1. In the side menu, select "Existing Payer"
+2. Choose a payer from the dropdown list
+3. View the full payment slip history
+4. Review the summary metrics (total slips, total amount, default rate)
 
-### 2. Predição para Novo Boleto
+### 2. Prediction for a New Payment Slip
 
-1. Preencha os dados do novo boleto:
-   - Número do boleto
-   - Valor original
-   - Data de inclusão
-   - Data de vencimento
-   - IDs do grupo e beneficiário
+1. Fill in the new payment slip data:
+   - Payment slip number
+   - Original amount
+   - Issue date
+   - Due date
+   - Group and beneficiary IDs
 
-2. Clique em "Fazer Predição de Inadimplência"
+2. Click "Run Default Prediction"
 
-3. Analise os resultados:
-   - **Classificação de Risco**: Alto, Médio ou Baixo
-   - **Probabilidade**: Percentual de chance de inadimplência
-   - **Predição**: Adimplente ou Inadimplente
-   - **Recomendações**: Ações sugeridas baseadas no risco
+3. Review the results:
+   - **Risk Classification**: High, Medium, or Low
+   - **Probability**: Percentage chance of default
+   - **Prediction**: Compliant or Defaulted
+   - **Recommendations**: Suggested actions based on risk
 
-## 📈 Interpretação dos Resultados
+## 📈 Interpreting the Results
 
-### Classificação de Risco
+### Risk Classification
 
-- **🔴 ALTO (>70%)**: Requer ação imediata
-  - Contato preventivo com cliente
-  - Condições especiais de pagamento
-  - Redução de limite de crédito
+- **🔴 HIGH (>70%)**: Requires immediate action
+  - Preventive contact with the client
+  - Special payment terms
+  - Reduced credit limit
 
-- **🟡 MÉDIO (30-70%)**: Monitoramento necessário
-  - Acompanhamento próximo
-  - Lembretes de vencimento
-  - Análise adicional do perfil
+- **🟡 MEDIUM (30-70%)**: Requires monitoring
+  - Close follow-up
+  - Due-date reminders
+  - Additional profile analysis
 
-- **🟢 BAIXO (<30%)**: Cliente confiável
-  - Processo padrão de cobrança
-  - Possível oferta de produtos adicionais
+- **🟢 LOW (<30%)**: Reliable client
+  - Standard collection process
+  - Possible offer of additional products
 
-## 🔧 Arquivos Necessários
+## 🔧 Required Files
 
-Certifique-se de que os seguintes arquivos estejam presentes:
+Make sure the following files are present:
 
 ```
-├── app_predicao_inadimplencia.py          # Aplicação principal
-├── requirements_app.txt                    # Dependências
+├── app_predicao_inadimplencia.py          # Main application
+├── requirements_app.txt                    # Dependencies
 ├── notebook/modelos salvos/
-│   └── modelo_bill_hunters_latest.joblib  # Modelo treinado
+│   └── modelo_bill_hunters_latest.joblib  # Trained model
 └── dados/
-    └── dados_treino_com_predicoes.csv     # Dados históricos
+    └── dados_treino_com_predicoes.csv     # Historical data
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **Streamlit**: Framework para aplicação web
-- **Pandas**: Manipulação de dados
-- **NumPy**: Computação numérica
+- **Streamlit**: Web application framework
+- **Pandas**: Data manipulation
+- **NumPy**: Numerical computing
 - **Scikit-learn**: Machine Learning
-- **Joblib**: Serialização do modelo
+- **Joblib**: Model serialization
 
-## 📝 Observações Importantes
+## 📝 Important Notes
 
-1. **Modelo**: Utiliza RandomForestClassifier treinado no notebook `modelo_definitivo.ipynb`
-2. **Dados Históricos**: Para pagadores existentes, usa dados históricos para melhor precisão
-3. **Novos Pagadores**: Para clientes novos, usa valores padrão baseados no boleto atual
-4. **Performance**: Modelo com 96.44% de acurácia e 92.5% de recall
+1. **Model**: Uses a RandomForestClassifier trained in the `modelo_definitivo.ipynb` notebook
+2. **Historical Data**: For existing payers, historical data is used for better accuracy
+3. **New Payers**: For new clients, default values based on the current payment slip are used
+4. **Performance**: Model with 96.44% accuracy and 92.5% recall
 
-## 🔄 Próximos Passos
+## 🔄 Next Steps
 
-- Integração com APIs de bancos de dados
-- Sistema de alertas automáticos
-- Dashboard gerencial com métricas agregadas
-- Módulo de retreinamento automático do modelo
-- Exportação de relatórios em PDF
+- Integration with database APIs
+- Automatic alert system
+- Management dashboard with aggregated metrics
+- Automatic model retraining module
+- PDF report export
 
 ## 🆘 Troubleshooting
 
-### Erro: "Modelo não encontrado"
-- Verifique se o arquivo `modelo_bill_hunters_latest.joblib` está na pasta correta
-- Certifique-se de que o caminho no código está correto
+### Error: "Model not found"
+- Check that the `modelo_bill_hunters_latest.joblib` file is in the correct folder
+- Make sure the path in the code is correct
 
-### Erro: "Dados não encontrados"
-- Verifique se o arquivo `dados_treino_com_predicoes.csv` está na pasta `dados/`
-- Confirme se o arquivo não está corrompido
+### Error: "Data not found"
+- Check that the `dados_treino_com_predicoes.csv` file is in the `dados/` folder
+- Confirm the file is not corrupted
 
-### Erro de dependências
-- Execute: `pip install --upgrade -r requirements_app.txt`
-- Use ambiente virtual (venv) para evitar conflitos
+### Dependency errors
+- Run: `pip install --upgrade -r requirements_app.txt`
+- Use a virtual environment (venv) to avoid conflicts
 
 ---
 
-**Desenvolvido por**: Equipe Bill Hunters  
-**Projeto**: Sistema de Predição de Inadimplência - Finnet Corp  
-**Ano**: 2025
+**Developed by**: Bill Hunters Team
+**Project**: Default Prediction System - Finnet Corp
+**Year**: 2025

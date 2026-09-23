@@ -1,49 +1,49 @@
-# Bill Hunters - Dashboard de Predição de Inadimplência
+# Bill Hunters - Default Prediction Dashboard
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### Opção 1: Execução Automática
+### Option 1: Automatic Run
 ```bash
 cd frontend
 python run.py
 ```
 
-### Opção 2: Execução Manual
+### Option 2: Manual Run
 ```bash
 cd frontend
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 📊 Funcionalidades
+## 📊 Features
 
-- **Dashboard Interativo**: Visualização completa dos dados de predição
-- **Filtros Dinâmicos**: Filtre por tipo de dados, status e predições
-- **Métricas em Tempo Real**: Acurácia, recall, precision e F1-score
-- **Gráficos Interativos**: Distribuições, análises temporais e correlações
-- **Análise de Features**: Importância das variáveis no modelo
-- **Download de Dados**: Exporte os resultados em CSV
+- **Interactive Dashboard**: Full visualization of prediction data
+- **Dynamic Filters**: Filter by data type, status, and predictions
+- **Real-Time Metrics**: Accuracy, recall, precision, and F1-score
+- **Interactive Charts**: Distributions, time-series analysis, and correlations
+- **Feature Analysis**: Variable importance in the model
+- **Data Download**: Export results as CSV
 
-## 🎯 Métricas Disponíveis
+## 🎯 Available Metrics
 
-- Taxa de Inadimplência
-- Acurácia do Modelo
-- Recall para Inadimplentes
-- Precision e F1-Score
-- Distribuição de Probabilidades
-- Análise Temporal
-- Importância das Features
+- Default Rate
+- Model Accuracy
+- Recall for Defaulters
+- Precision and F1-Score
+- Probability Distribution
+- Time-Series Analysis
+- Feature Importance
 
-## 📁 Estrutura
+## 📁 Structure
 
 ```
 frontend/
-├── app.py              # Aplicação principal Streamlit
-├── run.py              # Script de execução automática
-├── requirements.txt    # Dependências Python
-└── README.md          # Este arquivo
+├── app.py              # Main Streamlit application
+├── run.py              # Automatic run script
+├── requirements.txt    # Python dependencies
+└── README.md          # This file
 ```
 
-## 🌐 Acesso
+## 🌐 Access
 
-Após executar, acesse: http://localhost:8501
+After running, go to: http://localhost:8501

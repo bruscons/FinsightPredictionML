@@ -1,222 +1,222 @@
-# 🏦 Sistema de Predição de Inadimplência - Finnet Corp
+# 🏦 Default Prediction System - Finnet Corp
 
-Sistema web completo para predição de inadimplência de boletos bancários, utilizando o modelo de Machine Learning desenvolvido pela equipe Bill Hunters.
+Full web system for predicting default on bank payment slips (boletos), using the Machine Learning model developed by the Bill Hunters team.
 
-## 🚀 Aplicações Disponíveis
+## 🚀 Available Applications
 
-### 1. Aplicação Flask (Recomendada)
-Interface web completa com dashboard interativo.
+### 1. Flask Application (Recommended)
+Full web interface with an interactive dashboard.
 
-**Para iniciar:**
+**To start:**
 ```bash
-# Método 1: Script automático (Windows)
+# Method 1: Automatic script (Windows)
 iniciar_app.bat
 
-# Método 2: PowerShell (Windows)
+# Method 2: PowerShell (Windows)
 .\iniciar_app.ps1
 
-# Método 3: Manual
+# Method 3: Manual
 pip install -r requirements_flask.txt
 python app_flask.py
 ```
 
-**Acesse:** http://localhost:5000
+**Access:** http://localhost:5000
 
-### 2. Aplicação Streamlit (Alternativa)
-Interface moderna e responsiva.
+### 2. Streamlit Application (Alternative)
+Modern, responsive interface.
 
 ```bash
 pip install -r requirements_app.txt
 streamlit run app_predicao_inadimplencia.py
 ```
 
-**Acesse:** http://localhost:8501
+**Access:** http://localhost:8501
 
-## 📋 Funcionalidades
+## 📋 Features
 
-### 🔍 Análise de Pagadores Existentes
-- Visualização completa do histórico de boletos
-- Métricas consolidadas (total de boletos, valor total, taxa de inadimplência)
-- Tabela detalhada com todos os boletos do pagador
-- Identificação automática de padrões de comportamento
+### 🔍 Existing Payer Analysis
+- Full view of payment slip history
+- Consolidated metrics (total slips, total amount, default rate)
+- Detailed table with all of the payer's slips
+- Automatic identification of behavior patterns
 
-### 🎯 Predição para Novos Boletos
-- Formulário intuitivo para entrada de dados
-- Validação automática de campos obrigatórios
-- Cálculo de features automatizadas (dias para vencimento, etc.)
-- Utilização de dados históricos quando disponíveis
+### 🎯 Prediction for New Payment Slips
+- Intuitive data entry form
+- Automatic validation of required fields
+- Automated feature calculation (days to due date, etc.)
+- Use of historical data when available
 
-### 📊 Sistema de Classificação de Risco
-- **🟢 RISCO BAIXO (<30%)**: Cliente confiável
-- **🟡 RISCO MÉDIO (30-70%)**: Monitoramento necessário  
-- **🔴 RISCO ALTO (>70%)**: Ações imediatas recomendadas
+### 📊 Risk Classification System
+- **🟢 LOW RISK (<30%)**: Reliable client
+- **🟡 MEDIUM RISK (30-70%)**: Requires monitoring
+- **🔴 HIGH RISK (>70%)**: Immediate action recommended
 
-### 💡 Recomendações Inteligentes
-- Sugestões personalizadas baseadas no nível de risco
-- Estratégias de cobrança preventiva
-- Orientações para gestão de relacionamento com cliente
+### 💡 Smart Recommendations
+- Personalized suggestions based on risk level
+- Preventive collection strategies
+- Guidance for client relationship management
 
-## 📈 Como Usar
+## 📈 How to Use
 
-### Passo 1: Seleção do Pagador
-1. **Pagador Existente**: Escolha da lista de pagadores cadastrados
-2. **Novo Pagador**: Insira um novo ID de pagador
+### Step 1: Payer Selection
+1. **Existing Payer**: Choose from the list of registered payers
+2. **New Payer**: Enter a new payer ID
 
-### Passo 2: Visualização do Histórico (Para Pagadores Existentes)
-- Métricas resumidas aparecem automaticamente
-- Histórico detalhado de todos os boletos
-- Análise de comportamento de pagamento
+### Step 2: History View (For Existing Payers)
+- Summary metrics appear automatically
+- Detailed history of all payment slips
+- Payment behavior analysis
 
-### Passo 3: Predição para Novo Boleto
-1. Preencha os dados obrigatórios:
-   - Número do boleto
-   - Valor original
-   - Data de inclusão
-   - Data de vencimento
-   - IDs do grupo e beneficiário
+### Step 3: Prediction for a New Payment Slip
+1. Fill in the required data:
+   - Payment slip number
+   - Original amount
+   - Issue date
+   - Due date
+   - Group and beneficiary IDs
 
-2. Clique em "Fazer Predição de Inadimplência"
+2. Click "Run Default Prediction"
 
-3. Analise os resultados:
-   - Classificação de risco
-   - Probabilidade percentual
-   - Predição final (Adimplente/Inadimplente)
-   - Recomendações específicas
+3. Review the results:
+   - Risk classification
+   - Percentage probability
+   - Final prediction (Compliant/Defaulted)
+   - Specific recommendations
 
-## 🎯 Interpretação dos Resultados
+## 🎯 Interpreting the Results
 
-### Métricas Principais
-- **Probabilidade**: Percentual de chance de inadimplência (0-100%)
-- **Classificação**: Baixo, Médio ou Alto risco
-- **Predição**: Adimplente (≤50%) ou Inadimplente (>50%)
+### Main Metrics
+- **Probability**: Percentage chance of default (0-100%)
+- **Classification**: Low, Medium, or High risk
+- **Prediction**: Compliant (≤50%) or Defaulted (>50%)
 
-### Ações Recomendadas por Nível de Risco
+### Recommended Actions by Risk Level
 
-#### 🔴 ALTO (>70%)
-- Contato imediato com o cliente
-- Oferecimento de condições especiais de pagamento
-- Redução preventiva de limite de crédito
-- Implementação de cobrança preventiva
+#### 🔴 HIGH (>70%)
+- Immediate contact with the client
+- Offer special payment terms
+- Preventive reduction of credit limit
+- Implement preventive collection
 
-#### 🟡 MÉDIO (30-70%)
-- Monitoramento próximo do comportamento
-- Envio de lembretes próximo ao vencimento
-- Análise adicional do perfil do cliente
-- Acompanhamento de tendências
+#### 🟡 MEDIUM (30-70%)
+- Close monitoring of behavior
+- Send reminders close to the due date
+- Additional client profile analysis
+- Track trends
 
-#### 🟢 BAIXO (<30%)
-- Processo padrão de cobrança
-- Cliente considerado confiável
-- Possibilidade de ofertas de produtos adicionais
-- Manutenção do relacionamento
+#### 🟢 LOW (<30%)
+- Standard collection process
+- Client considered reliable
+- Possibility of additional product offers
+- Maintain the relationship
 
-## 📊 Dados Utilizados
+## 📊 Data Used
 
-### Features Principais
-- **Valor do boleto**: Valor original da cobrança
-- **Dias para vencimento**: Prazo entre emissão e vencimento
-- **Dados temporais**: Mês, ano, dia da emissão e vencimento
-- **Histórico do pagador**: Comportamento passado (quando disponível)
+### Main Features
+- **Payment slip amount**: Original charge amount
+- **Days to due date**: Period between issue and due date
+- **Time-related data**: Month, year, day of issue and due date
+- **Payer history**: Past behavior (when available)
 
-### Features Históricas (Para Pagadores Existentes)
-- Quantidade de cobranças anteriores
-- Valor médio histórico
-- Taxa de inadimplência histórica
-- Taxa de atraso histórica
-- Desvio padrão dos valores
-- Tempo desde primeira cobrança
+### Historical Features (For Existing Payers)
+- Number of previous charges
+- Historical average amount
+- Historical default rate
+- Historical late-payment rate
+- Standard deviation of amounts
+- Time since first charge
 
-## ⚙️ Especificações Técnicas
+## ⚙️ Technical Specifications
 
-### Modelo de Machine Learning
-- **Algoritmo**: RandomForestClassifier
-- **Acurácia**: 96.44%
+### Machine Learning Model
+- **Algorithm**: RandomForestClassifier
+- **Accuracy**: 96.44%
 - **Recall**: 92.5%
 - **Precision**: 91%
 - **F1-Score**: 92%
 
-### Tecnologias
+### Technologies
 - **Backend**: Flask/Streamlit + Python
 - **Machine Learning**: Scikit-learn
-- **Dados**: Pandas + NumPy
+- **Data**: Pandas + NumPy
 - **Frontend**: Bootstrap + HTML/CSS/JavaScript
-- **Serialização**: Joblib
+- **Serialization**: Joblib
 
-### Arquivos Necessários
+### Required Files
 ```
-├── app_flask.py                           # Aplicação Flask
-├── app_predicao_inadimplencia.py         # Aplicação Streamlit
-├── templates/index.html                   # Interface web
-├── requirements_flask.txt                 # Dependências Flask
-├── requirements_app.txt                   # Dependências Streamlit
-├── iniciar_app.bat                       # Script Windows
-├── iniciar_app.ps1                       # Script PowerShell
+├── app_flask.py                           # Flask application
+├── app_predicao_inadimplencia.py         # Streamlit application
+├── templates/index.html                   # Web interface
+├── requirements_flask.txt                 # Flask dependencies
+├── requirements_app.txt                   # Streamlit dependencies
+├── iniciar_app.bat                       # Windows script
+├── iniciar_app.ps1                       # PowerShell script
 ├── notebook/modelos salvos/
-│   └── modelo_bill_hunters_latest.joblib # Modelo treinado
+│   └── modelo_bill_hunters_latest.joblib # Trained model
 └── dados/
-    └── dados_treino_com_predicoes.csv    # Dados históricos
+    └── dados_treino_com_predicoes.csv    # Historical data
 ```
 
 ## 🔧 Troubleshooting
 
-### ❌ "Modelo não encontrado"
-**Solução**: Verifique se o arquivo `modelo_bill_hunters_latest.joblib` está em `notebook/modelos salvos/`
+### ❌ "Model not found"
+**Solution**: Check that `modelo_bill_hunters_latest.joblib` is in `notebook/modelos salvos/`
 
-### ❌ "Dados não encontrados"  
-**Solução**: Confirme se `dados_treino_com_predicoes.csv` está na pasta `dados/`
+### ❌ "Data not found"
+**Solution**: Confirm that `dados_treino_com_predicoes.csv` is in the `dados/` folder
 
-### ❌ Erro de dependências
-**Solução**: 
+### ❌ Dependency error
+**Solution**:
 ```bash
 pip install --upgrade pip
 pip install -r requirements_flask.txt
 ```
 
-### ❌ Erro de porta ocupada
-**Solução**: 
-- Flask: Mude a porta no arquivo `app_flask.py` (linha final)
+### ❌ Port already in use
+**Solution**:
+- Flask: Change the port in `app_flask.py` (last line)
 - Streamlit: Use `streamlit run app_predicao_inadimplencia.py --server.port 8502`
 
-### ❌ Erro de memória
-**Solução**: Para datasets muito grandes, considere usar amostragem dos dados históricos
+### ❌ Memory error
+**Solution**: For very large datasets, consider sampling the historical data
 
-## 🔒 Considerações de Segurança
+## 🔒 Security Considerations
 
-- ✅ Validação de entrada de dados
-- ✅ Tratamento de erros robusto  
-- ✅ Logs de predições (em desenvolvimento)
-- ⚠️ **Importante**: Esta é uma versão de demonstração. Para produção, implemente:
-  - Autenticação de usuários
-  - Criptografia de dados sensíveis
-  - Auditoria de acessos
+- ✅ Input data validation
+- ✅ Robust error handling
+- ✅ Prediction logs (in development)
+- ⚠️ **Important**: This is a demo version. For production, implement:
+  - User authentication
+  - Sensitive data encryption
+  - Access auditing
   - Rate limiting
 
-## 📈 Próximas Versões
+## 📈 Upcoming Versions
 
-- [ ] Dashboard gerencial com métricas agregadas
-- [ ] Integração com APIs de bancos de dados
-- [ ] Sistema de alertas automáticos por email/SMS
-- [ ] Módulo de retreinamento automático
-- [ ] Exportação de relatórios (PDF/Excel)
-- [ ] API REST para integração com outros sistemas
-- [ ] Análise de tendências temporais
-- [ ] Segmentação automática de clientes
+- [ ] Management dashboard with aggregated metrics
+- [ ] Integration with database APIs
+- [ ] Automatic email/SMS alert system
+- [ ] Automatic retraining module
+- [ ] Report export (PDF/Excel)
+- [ ] REST API for integration with other systems
+- [ ] Time-series trend analysis
+- [ ] Automatic client segmentation
 
-## 📞 Suporte
+## 📞 Support
 
-**Equipe**: Bill Hunters  
-**Projeto**: Sistema de Predição de Inadimplência  
-**Cliente**: Finnet Corp  
-**Ano**: 2025
+**Team**: Bill Hunters
+**Project**: Default Prediction System
+**Client**: Finnet Corp
+**Year**: 2025
 
-Para suporte técnico, consulte a documentação completa no notebook `modelo_definitivo.ipynb` ou entre em contato com a equipe de desenvolvimento.
+For technical support, refer to the full documentation in the `modelo_definitivo.ipynb` notebook or contact the development team.
 
 ---
 
 **⚡ Quick Start:**
-1. Execute `iniciar_app.bat` (Windows) ou `python app_flask.py`
-2. Acesse http://localhost:5000
-3. Selecione um pagador existente ou crie um novo
-4. Preencha os dados do boleto
-5. Clique em "Fazer Predição"
-6. Analise os resultados e recomendações
+1. Run `iniciar_app.bat` (Windows) or `python app_flask.py`
+2. Access http://localhost:5000
+3. Select an existing payer or create a new one
+4. Fill in the payment slip data
+5. Click "Run Prediction"
+6. Review the results and recommendations
