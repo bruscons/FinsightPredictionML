@@ -161,6 +161,20 @@ The required data is located in the `notebooks/` and `dados/` folders. Make sure
 - **Project Compliance with Publication Criteria**: Documentation finalization
 - **Final Pitch Presentation**: Presentation of results and impact
 
+## My Contribution
+
+This was a collaborative academic project.
+
+My responsibilities included:
+
+* Built the feature engineering pipeline in `notebook/modelo_definitivo.ipynb`: the default status classification (`definir_status`), days-to-due-date and historical payer features, IQR-based outlier treatment, and the encoding needed to feed the models.
+* Trained and compared the classification models used to predict default (Random Forest, XGBoost, Logistic Regression), and picked the final one based on accuracy, recall, precision, and F1-score.
+* Ran the exploratory data analysis that shaped these decisions and led the mathematics artifact, testing the normality of the model's quantitative variables.
+
+I was responsible primarily for the data science side of the project: the feature engineering, the model training, and the decisions behind them. The Streamlit and Flask dashboards were built by the rest of the team.
+
+Finnet's problem was catching default risk early enough to act on it. The model is what actually does that job, so the accuracy and recall numbers it hits (96.44% and 92.5%) are what make the rest of the project worth building on top of.
+
 ## License
 
 This project is licensed under the Creative Commons Attribution 4.0 International License.
