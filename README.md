@@ -133,6 +133,21 @@ jupyter lab
 
 The required data is located in the `notebooks/` and `dados/` folders. Make sure the CSV files are in the correct location before running the notebooks.
 
+## Evaluation
+
+The final model (`model_ultra_final`, a `RandomForestClassifier` with `class_weight='balanced'`) is evaluated in `notebook/modelo_definitivo.ipynb` on the target `target_inad` (1 = defaulted, 0 = not defaulted). Results reported there:
+
+- Accuracy: 96.44%
+- Recall (for the defaulted class): 92.50%
+- Precision: 91%
+- F1-score: 92%
+
+Evaluation method: temporal train/test split, not cross-validation. The data is sorted by due date and split at a cutoff of May 1, 2025, so the model is trained on earlier billings and tested on later ones it never saw during training. This is meant to simulate how the model would perform on real future data instead of a random split that could leak information across time.
+
+Baseline: the notebook doesn't train a separate baseline model, but its own discussion section compares these results against typical industry benchmarks for this kind of problem (85-90% accuracy, 80-85% recall), which the model exceeds on both counts.
+
+Target class distribution: on the full unified dataset, before the temporal split, the three-way payment status breaks down as 286,026 "Em Dia" (on time), 129,839 "Atraso" (late), and 116,674 "Inadimplente" (defaulted) records. The binary target used for training collapses this into defaulted (roughly 22% of records) versus not defaulted (roughly 78%), which is why the model is trained with `class_weight='balanced'` rather than on the raw distribution.
+
 ## Release History
 
 ### Sprint 1 - 08/15/2025
